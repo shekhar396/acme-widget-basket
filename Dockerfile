@@ -13,8 +13,12 @@ COPY . .
 # Install project dependencies
 RUN composer install
 
-# Expose port for application (if using web server like Apache/Nginx)
+# Copy the entry point script and set execution permissions
+COPY entrypoint.sh /usr/local/bin/entrypoint.sh
+RUN chmod +x /usr/local/bin/entrypoint.sh
+
+# Expose port for the PHP built-in server
 EXPOSE 8000
 
-# Set the entry point to PHP's built-in server (optional for testing)
-CMD ["php", "-S", "0.0.0.0:8000", "-t", "public"]
+# Use the entry point script
+ENTRYPOINT ["entrypoint.sh"]
