@@ -1,0 +1,11 @@
+# Ignore vendor folder (Composer dependencies)
+vendor/
+
+# Ignore PHPUnit report folder
+phpunit-report/
+
+# Ignore Composer lock file
+composer.lock
+
+# Ignore PHPStan configuration file
+phpstan.json
