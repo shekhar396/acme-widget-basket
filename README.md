@@ -44,7 +44,6 @@ Make sure you have the following installed:
     http://localhost:8000
 
 ### 6. Run the Test
-    ```bash
     docker-compose exec php vendor/bin/phpunit tests/
 
 
