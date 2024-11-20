@@ -24,20 +24,16 @@ Make sure you have the following installed:
 ## 🐳 Getting Started with Docker
 
 ### 1. Clone the Repository
-    ```bash
     git clone https://github.com/shekhar396/acme-widget-basket.git
     cd acme-widget-basket
 
 ### 2. Build the Docker Image
-    ```bash
     docker-compose build
 
 ### 3. Start the Docker Containers
-    ```bash
     docker-compose up -d
 
 ### 4. Run the Application
-    ```bash
     docker-compose exec php php -S 0.0.0.0:8000 -t public/
 
 ### 5. Access the Application
@@ -45,6 +41,21 @@ Make sure you have the following installed:
 
 ### 6. Run the Test
     docker-compose exec php vendor/bin/phpunit tests/
+
+## 💻 Running Locally (Without Docker)
+
+### 1. Install Dependencies
+    composer install
+
+### 2. Serve the Application
+    php -S 0.0.0.0:8000 -t public/
+
+### 3. Access the Application
+    http://localhost:8000
+    
+### 4. Run the Tests Locally
+    vendor/bin/phpunit tests/
+
 
 
 
